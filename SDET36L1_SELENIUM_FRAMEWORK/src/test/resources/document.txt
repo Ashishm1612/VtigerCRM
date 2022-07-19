@@ -1,0 +1,14 @@
+class FetchDataFromExcel
+{
+psvm()
+{
+FileInputStream fis= new FileInputStream("./src/test/resources/testdata.xlsx");
+Workbook workbook =WorkbookFactory.create(fis);
+String data=workbook.getSheet("Contacts").getRow(1).getCell(2).getStringCellValue();// workbook.getSheet("Contacts").getRow(1).getCell(2).setCellValue("SDET");
+system.out.println(data);                                                               FileOutputStream fos= new FileOutputStream("./src/test/resources/testdata.xlsx");
+workbook.close();                                                                        workbook.write(fos);
+}                                                                                         workbook.close();
+}
+leads
+product
+campaign
